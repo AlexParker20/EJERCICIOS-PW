@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Resultado de Estudios</title>
+</head>
+<body>
+    <h1>Resultado</h1>
+    <?php
+    // Verificar si se recibió el formulario
+    if (isset($_POST['name']) && isset($_POST['education'])) {
+        $name = $_POST['name'];
+        $education = $_POST['education'];
+
+        // Mostrar el resultado con el nombre y el nivel de estudios
+        echo "<p>Hola <b>$name</b>, has seleccionado el siguiente nivel de estudios:</p>";
+        echo "<p><b>$education</b></p>";
+    } else {
+        echo "<p>Por favor, ingresa tu nombre y selecciona un nivel de estudios.</p>";
+    }
+    ?>
+</body>
+</html>
+
